@@ -60,6 +60,7 @@ socket.on("location", (location) => {
   
   `;
   $messageList.appendChild(newListItem);
+  $messageList.scrollTo(0, $messageList.scrollHeight);
 });
 
 socket.emit("join", { username, room }, (error) => {
