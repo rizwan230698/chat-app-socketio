@@ -31,6 +31,7 @@ socket.on("message", (message) => {
   <span class="time">${moment(message.createdAt).format("h:mm a")}</span>
   `;
   $messageList.appendChild(newListItem);
+  $messageList.scrollTo(0, $messageList.scrollHeight);
 });
 
 $locationButton.addEventListener("click", () => {
@@ -81,7 +82,6 @@ socket.on("roomData", ({ room, users }) => {
 });
 
 $hamBurger.addEventListener("click", () => {
-  console.log($sidebar.style.display);
   if ($sidebar.style.display === "block") {
     $sidebar.style.display = "none";
   } else {
