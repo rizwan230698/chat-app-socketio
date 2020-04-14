@@ -49,7 +49,7 @@ input:not(:invalid) + label {
   left: 0;
   top: -2rem;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 input {
   height: 3.2rem;
