@@ -185,7 +185,6 @@ button:active {
   }
   .messages {
     padding: 1rem;
-    flex: 80%;
   }
   .messages li {
     max-width: 100%;
