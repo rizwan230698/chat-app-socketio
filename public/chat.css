@@ -191,7 +191,7 @@ button:active {
     max-width: 100%;
   }
   #messageForm {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     border-top: 1px solid #faf9f9;
   }
