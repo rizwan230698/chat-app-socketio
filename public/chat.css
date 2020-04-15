@@ -68,10 +68,10 @@ header span {
 .messages li {
   max-width: 60%;
   margin-bottom: 0.8rem;
-  padding: 1rem 0 1rem 1.2rem;
+  padding: 1rem 0.5rem 1rem 1.2rem;
   list-style: none;
   border-radius: 4px;
-  word-break: break-all;
+  word-break: break-word;
   background-color: rgba(254, 213, 2, 0.8);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -83,14 +83,16 @@ li .username {
   font-weight: bold;
   flex: 0 0 100%;
   margin-bottom: 0.8rem;
+  min-width: 4ch;
 }
 li .content {
-  flex: 0 0 calc(100% - 60px);
+  /* flex: 0 0 calc(100% - 58px); */
+  flex: 1;
 }
 
 li .time {
   font-size: 1.2rem;
-  flex: 0 0 60px;
+  flex: 0 0 55px;
   align-self: flex-end;
   text-align: center;
 }
@@ -154,6 +156,7 @@ button:active {
   header {
     position: sticky;
     top: 0;
+    border-bottom: 1px solid #faf9f9;
   }
   .hamburger {
     display: block;
@@ -186,6 +189,7 @@ button:active {
   #messageForm {
     position: sticky;
     bottom: 0;
+    border-top: 1px solid #faf9f9;
   }
   #messageForm input {
     margin-bottom: 0.5rem;
