@@ -2,6 +2,7 @@ const socket = io();
 
 //Elements
 const $messageForm = document.getElementById("messageForm");
+const $msgBtn = document.getElementById("msg-btn");
 const $messageFormInput = document.querySelector("input");
 const $locationButton = document.getElementById("send-location");
 const $messageList = document.querySelector(".messages");
@@ -17,9 +18,11 @@ $messageForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const newMessage = e.target.elements.message.value;
   if (newMessage) {
+    $msgBtn.setAttribute("disabled", "disabled");
     socket.emit("sendMessage", newMessage, (error) => {
       $messageFormInput.value = "";
       $messageFormInput.focus();
+      $msgBtn.removeAttribute("disabled");
     });
   }
 });
