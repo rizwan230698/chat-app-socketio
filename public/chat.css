@@ -184,7 +184,7 @@ button:active {
     overflow: hidden;
   }
   .messages {
-    padding: 1rem;
+    padding: 1rem 1rem 0;
   }
   .messages li {
     max-width: 100%;
