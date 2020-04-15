@@ -83,9 +83,11 @@ socket.on("roomData", ({ room, users }) => {
 });
 
 $hamBurger.addEventListener("click", () => {
-  if ($sidebar.style.display === "block") {
-    $sidebar.style.display = "none";
+  if ($sidebar.clientWidth === 0) {
+    $sidebar.classList.add("sidebar-mob");
+    $hamBurger.innerHTML = `<i class="fa fa-times"></i>`;
   } else {
-    $sidebar.style.display = "block";
+    $sidebar.classList.remove("sidebar-mob");
+    $hamBurger.innerHTML = `<i class="fa fa-bars"></i>`;
   }
 });

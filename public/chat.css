@@ -101,8 +101,6 @@ li .time {
   align-items: flex-start;
   padding: 0.8rem 2rem 0.3rem;
   background-color: #fff;
-  position: sticky;
-  bottom: 0;
 }
 #messageForm input {
   flex: 0 0 100%;
@@ -114,7 +112,7 @@ li .time {
   outline: none;
 }
 #messageForm input:focus {
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
 }
 
 button {
@@ -153,13 +151,23 @@ button:active {
 }
 
 @media only screen and (max-width: 600px) {
+  header {
+    position: sticky;
+    top: 0;
+  }
   .hamburger {
     display: block;
   }
   .sidebar {
+    flex: 0 0 0%;
+    padding: 2rem 0rem;
+    width: 0px;
+    transition: all 0.2s;
+  }
+  .sidebar-mob {
     flex: 0 0 20%;
     padding: 2rem 0.8rem;
-    display: none;
+    width: unset;
   }
   .users li {
     font-size: 1.6rem;
@@ -174,6 +182,10 @@ button:active {
   }
   .messages li {
     max-width: 100%;
+  }
+  #messageForm {
+    position: sticky;
+    bottom: 0;
   }
   #messageForm input {
     margin-bottom: 0.5rem;
