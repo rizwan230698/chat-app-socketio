@@ -94,3 +94,9 @@ $hamBurger.addEventListener("click", () => {
     $hamBurger.innerHTML = `<i class="fa fa-bars"></i>`;
   }
 });
+$messageFormInput.addEventListener("focus", () => {
+  if (!$sidebar.className.includes("sidebar-mob")) {
+    return;
+  }
+  $sidebar.classList.remove("sidebar-mob");
+});
