@@ -51,7 +51,7 @@ header span {
 }
 .main {
   flex: 1;
-  padding: 2rem 5rem;
+  padding: 0 5rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,6 +77,9 @@ header span {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.messages li:first-child {
+  margin-top: 1rem;
 }
 li .username {
   font-size: 1.4rem;
@@ -184,13 +187,14 @@ button:active {
     overflow: hidden;
   }
   .messages {
-    padding: 0 1rem;
+    padding: 1rem;
+    flex: 0 0 calc(100% - 93px);
   }
   .messages li {
     max-width: 100%;
   }
   #messageForm {
-    position: relative;
+    position: fixed;
     bottom: 0;
     border-top: 1px solid #faf9f9;
   }
