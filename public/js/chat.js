@@ -99,4 +99,5 @@ $messageFormInput.addEventListener("focus", () => {
     return;
   }
   $sidebar.classList.remove("sidebar-mob");
+  $hamBurger.innerHTML = `<i class="fa fa-bars"></i>`;
 });
