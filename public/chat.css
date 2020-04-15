@@ -192,5 +192,6 @@ button:active {
   }
   button {
     margin: 0.5rem;
+    padding: 0.8rem 2.2rem;
   }
 }
