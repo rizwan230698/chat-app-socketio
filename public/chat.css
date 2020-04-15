@@ -193,6 +193,9 @@ button:active {
   .messages li {
     max-width: 100%;
   }
+  .messages li:first-child {
+    margin-top: unset;
+  }
   #messageForm {
     position: fixed;
     bottom: 0;
