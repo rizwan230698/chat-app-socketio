@@ -181,6 +181,7 @@ button:active {
   }
   .main {
     padding: 0;
+    overflow: hidden;
   }
   .messages {
     padding: 1rem;
