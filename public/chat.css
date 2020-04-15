@@ -168,9 +168,12 @@ button:active {
     transition: all 0.2s;
   }
   .sidebar-mob {
-    flex: 0 0 20%;
+    flex: 0 0 45%;
     padding: 2rem 0.8rem;
     width: unset;
+  }
+  .sidebar h2 {
+    margin-left: 1.25rem;
   }
   .users li {
     font-size: 1.6rem;
