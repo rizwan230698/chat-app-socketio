@@ -201,6 +201,10 @@ button:active {
   .messages li:first-child {
     margin-top: unset;
   }
+  li.msg-right {
+    align-self: flex-end;
+    background-color: #8ac06d;
+  }
   #messageForm {
     position: fixed;
     bottom: 0;
