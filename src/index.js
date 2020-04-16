@@ -33,7 +33,7 @@ io.on("connection", (socket) => {
       "message",
       generateMessage(
         "Admin",
-        `Welcome, ${user.username} to ${user.room} room.`
+        `${user.username}, welcome to ${user.room} room.`
       )
     );
     socket.broadcast
