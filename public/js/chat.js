@@ -36,7 +36,8 @@ $messageForm.addEventListener("submit", (e) => {
 });
 socket.on("message", (message) => {
   const newListItem = document.createElement("li");
-  alert(username === message.username);
+  alert(username + " " + message.username);
+
   if (username === message.username) {
     newListItem.setAttribute("class", "msg-right");
   }
