@@ -78,6 +78,10 @@ header span {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+li.msg-right {
+  align-self: flex-end;
+  background-color: #8ac06d;
+}
 .messages li:first-child {
   margin-top: 1rem;
 }
@@ -99,6 +103,7 @@ li .time {
   align-self: flex-end;
   text-align: center;
 }
+
 #messageForm {
   flex: 1;
   display: flex;

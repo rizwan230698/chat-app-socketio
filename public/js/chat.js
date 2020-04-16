@@ -28,6 +28,9 @@ $messageForm.addEventListener("submit", (e) => {
 });
 socket.on("message", (message) => {
   const newListItem = document.createElement("li");
+  if (username === message.username) {
+    newListItem.setAttribute("class", "msg-right");
+  }
   newListItem.innerHTML = `
   <h4 class="username">${message.username}</h4>
   <span class="content">${message.text}</span>
