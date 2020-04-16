@@ -14,6 +14,14 @@ const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
+socket.emit("join", { username, room }, (error) => {
+  if (error) {
+    alert(error);
+
+    window.location.href = "/";
+  }
+});
+
 $messageForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const newMessage = e.target.elements.message.value;
@@ -28,6 +36,7 @@ $messageForm.addEventListener("submit", (e) => {
 });
 socket.on("message", (message) => {
   const newListItem = document.createElement("li");
+  alert(username === message.username);
   if (username === message.username) {
     newListItem.setAttribute("class", "msg-right");
   }
@@ -67,14 +76,6 @@ socket.on("location", (location) => {
   `;
   $messageList.appendChild(newListItem);
   $messageList.scrollTo(0, $messageList.scrollHeight);
-});
-
-socket.emit("join", { username, room }, (error) => {
-  if (error) {
-    alert(error);
-
-    window.location.href = "/";
-  }
 });
 
 socket.on("roomData", ({ room, users }) => {
