@@ -66,7 +66,7 @@ $locationButton.addEventListener("click", () => {
 
 socket.on("location", (location) => {
   const newListItem = document.createElement("li");
-  if (username.trim().toLowerCase() === message.username) {
+  if (username.trim().toLowerCase() === location.username) {
     newListItem.setAttribute("class", "msg-right");
   }
   newListItem.innerHTML = `
