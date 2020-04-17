@@ -37,7 +37,7 @@ $messageForm.addEventListener("submit", (e) => {
 socket.on("message", (message) => {
   const newListItem = document.createElement("li");
 
-  if (username.toLowerCase() === message.username.toLowerCase()) {
+  if (username.trim().toLowerCase() === message.username) {
     newListItem.setAttribute("class", "msg-right");
   }
   newListItem.innerHTML = `
@@ -66,6 +66,9 @@ $locationButton.addEventListener("click", () => {
 
 socket.on("location", (location) => {
   const newListItem = document.createElement("li");
+  if (username.trim().toLowerCase() === message.username) {
+    newListItem.setAttribute("class", "msg-right");
+  }
   newListItem.innerHTML = `
   <h4 class="username">${location.username}</h4>
   <a class="content" href=${
