@@ -27,7 +27,8 @@ header span {
   height: calc(100vh - 4rem);
 }
 .sidebar {
-  display: block;
+  display: flex;
+  flex-direction: column;
   min-width: 180px;
   flex: 0 0 15%;
   padding: 1.5rem;
@@ -37,7 +38,7 @@ header span {
 .sidebar h2 {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
 }
 .users {
   display: flex;
@@ -183,7 +184,7 @@ button:active {
     width: unset;
   }
   .sidebar h2 {
-    margin-left: 1.25rem;
+    /* margin-left: 1.25rem; */
   }
   .users li {
     font-size: 1.6rem;
