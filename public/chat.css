@@ -28,6 +28,7 @@ header span {
 }
 .sidebar {
   display: block;
+  min-width: 180px;
   flex: 0 0 15%;
   padding: 1.5rem;
   background-color: #111;
@@ -41,11 +42,11 @@ header span {
 .users {
   display: flex;
   flex-direction: column;
+  padding: 0rem 1.5rem;
 }
 .users li {
   font-size: 1.8rem;
   margin-bottom: 0.7rem;
-  margin-left: 1.8rem;
   text-transform: capitalize;
   font-weight: 400;
 }
@@ -93,7 +94,6 @@ li .username {
   min-width: 4ch;
 }
 li .content {
-  /* flex: 0 0 calc(100% - 58px); */
   flex: 1;
 }
 
@@ -160,7 +160,7 @@ button:active {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   header {
     position: sticky;
     top: 0;
@@ -173,10 +173,12 @@ button:active {
     flex: 0 0 0%;
     padding: 2rem 0rem;
     width: 0px;
+    min-width: unset;
     transition: all 0.2s;
   }
   .sidebar-mob {
-    flex: 0 0 45%;
+    flex: 0 0 auto;
+    max-width: 45%;
     padding: 2rem 0.8rem;
     width: unset;
   }
@@ -185,7 +187,6 @@ button:active {
   }
   .users li {
     font-size: 1.6rem;
-    margin-left: 2rem;
   }
   .main {
     padding: 0;
@@ -202,6 +203,7 @@ button:active {
     margin-top: unset;
   }
   #messageForm {
+    width: 100%;
     position: fixed;
     bottom: 0;
     border-top: 1px solid #faf9f9;
